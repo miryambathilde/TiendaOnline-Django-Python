@@ -5,6 +5,7 @@ from gestionPedidos.models import Clientes, Articulos, Pedidos
 # Register your models here.
 class ClientesAdmin(admin.ModelAdmin):
     list_display=("nombre", "direccion", "tfno")
+    search_fields=("nombre", "tfno")
         
 
 #linea de codigo para tener desde el admin disponible nuestras tablas - entre parentesis el nombre del modelo
