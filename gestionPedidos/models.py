@@ -6,7 +6,8 @@ from django.db import models
 class Clientes(models.Model):
     nombre = models.CharField(max_length=30)
     direccion = models.CharField(max_length=50)
-    email = models.EmailField()
+    #(blank=True, null=True) es para hacer que el campo no sea obligatorio si no OPCIONAL
+    email = models.EmailField(blank=True, null=True)
     tfno = models.CharField(max_length=9)
 
 class Articulos(models.Model):
