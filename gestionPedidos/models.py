@@ -5,7 +5,8 @@ from django.db import models
 
 class Clientes(models.Model):
     nombre = models.CharField(max_length=30)
-    direccion = models.CharField(max_length=50)
+    #verbose_name="Dirección de envío" - con verbose_name cambiamos como queremos que se vea ese campo en el admin sin cambiarlo en la tabla
+    direccion = models.CharField(max_length=50, verbose_name="Dirección de envío")
     #(blank=True, null=True) es para hacer que el campo no sea obligatorio si no OPCIONAL
     email = models.EmailField(blank=True, null=True)
     tfno = models.CharField(max_length=9)
