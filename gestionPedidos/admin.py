@@ -11,6 +11,7 @@ class ArticulosAdmin(admin.ModelAdmin):
     list_filter=("seccion",)
 
 class PedidosAdmin(admin.ModelAdmin):
+    list_display=("numero", "fecha")
     list_filter=("fecha",)
 
 #linea de codigo para tener desde el admin disponible nuestras tablas - entre parentesis el nombre del modelo
