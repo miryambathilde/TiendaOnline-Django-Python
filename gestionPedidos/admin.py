@@ -13,6 +13,7 @@ class ArticulosAdmin(admin.ModelAdmin):
 class PedidosAdmin(admin.ModelAdmin):
     list_display=("numero", "fecha")
     list_filter=("fecha",)
+    date_hierarchy="fecha"
 
 #linea de codigo para tener desde el admin disponible nuestras tablas - entre parentesis el nombre del modelo
 admin.site.register(Clientes, ClientesAdmin)
