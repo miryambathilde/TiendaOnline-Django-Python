@@ -8,8 +8,8 @@ class ClientesAdmin(admin.ModelAdmin):
     search_fields=("nombre", "tfno")
         
 class ArticulosAdmin(admin.ModelAdmin):
-    list_filter=("seccion", )
+    list_filter=("seccion")
 #linea de codigo para tener desde el admin disponible nuestras tablas - entre parentesis el nombre del modelo
-admin.site.register(Clientes, ClientesAdmin, ArticulosAdmin)
-admin.site.register(Articulos)
+admin.site.register(Clientes, ClientesAdmin)
+admin.site.register(Articulos, ArticulosAdmin)
 admin.site.register(Pedidos)
