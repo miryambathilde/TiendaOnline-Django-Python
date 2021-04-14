@@ -6,13 +6,11 @@
 {% if articulos %}
 <!-- si encuentra información a la consulta del producto que nos devuelva cuantos articulos ha encontrado -->
     <p>Artículos encontrados: {{articulos|length}} articulos</p>
-    <!-- bucle for para recorrer la lista -->
+    <!-- bucle for para recorrer la lista, &nbsp; es un espacio en blanco-->
     <ul>
         {% for articulo in articulos %}
             <li>
-                {{articulo.nombre}}
-                {{articulo.seccion}}
-                {{articulo.precio}}
+                {{articulo.nombre}} &nbsp; {{articulo.seccion}} &nbsp; {{articulo.precio}}
             </li>
         {% endfor %}
     </ul>
