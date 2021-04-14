@@ -1,24 +1,24 @@
 <html>
-    <body>
-        <!-- la query viene desde la vista -->
-        <p>Estás buscando: <strong>{{query}}</strong></p>
+<body>
+<!-- la query viene desde la vista -->
+<p>Estás buscando: <strong>{{query}}</strong></p>
 
-        {% if articulos %}
-        <!-- si encuentra información a la consulta del producto que nos devuelva cuantos articulos ha encontrado -->
-            <p>Artículos encontrados: {{articulos|length}} articulos</p>
-            <!-- bucle for para recorrer la lista -->
-            <ul>
-                { % for articulo in articulos %}
-                <li>
-                    {{articulo.nombre}}
-                    {{articulo.seccion}}
-                    {{articulo.precio}}
-                </li>
-                {% endfor %}
-            </ul>
-        <!-- si no encuentra ningun articulo en la consulta -->
-        {% else %}
-        <p>Artículo no encontrado</p>
-        {% endif %}
-    </body>
+{% if articulos %}
+<!-- si encuentra información a la consulta del producto que nos devuelva cuantos articulos ha encontrado -->
+    <p>Artículos encontrados: {{articulos|length}} articulos</p>
+    <!-- bucle for para recorrer la lista -->
+    <ul>
+        {% for articulo in articulos %}
+            <li>
+                {{articulo.nombre}}
+                {{articulo.seccion}}
+                {{articulo.precio}}
+            </li>
+        {% endfor %}
+    </ul>
+    <!-- si no encuentra ningun articulo en la consulta -->
+{% else %}
+    <p>Artículo no encontrado</p>
+{% endif %}
+</body>
 </html>
