@@ -16,7 +16,7 @@ def buscar(request):
         #icontains funciona como el like dentro de una consulta de una instruccion SQL, nos devuelve cualquier valor que contenga el nombre del producto sea en la posición que sea
         articulos=Articulos.objects.filter(nombre__icontains=producto)
         #redigir al html que muestre la información del producto buscado
-        return render(request, "resultado_busqueda.html", {"articulos": articulos, "query":producto})
+        return render(request, "resultados_busqueda.html", {"articulos": articulos, "query":producto})
         
     else:
         mensaje="No has introducido ningún producto"
